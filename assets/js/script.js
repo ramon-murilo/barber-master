@@ -88,3 +88,22 @@ const filter = function () {
 }
 
 addEventOnElem(filterBtns, "click", filter);
+
+
+
+function sendToWhatsapp(){
+  let number = "+551197760864"
+
+  let name = document.getElementById('name').value;
+  let email = document.getElementById('email').value;
+  let date = document.getElementById('date').value;
+  let message = document.getElementById('message').value;
+
+
+  var url = "https://wa.me/" + number + "?text="
+  + "Name: " +name+ "%0a"
+  + "Serviço:" +email+ "%0a"
+  + "Mensagem:" +message+ "%0a%0a"
+
+  window.open(url, '_blank').focus();
+}
